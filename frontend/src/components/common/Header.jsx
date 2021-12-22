@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { push } from 'connected-react-router';
-import ImgLogo from '../../assets/img/synamatic-logo.png';
+import ImgLogo from '../../assets/img/logo.png';
 import ImgSearch from '../../assets/img/search.svg';
 import ImgArrowDown from '../../assets/img/arrowdown.svg';
 import ImgHeart from '../../assets/img/heart.svg';
-import MenuIcon from './MenuIcone';
+import MenuIcon from './MenuIcon';
 import Search from './Search';
 
 const Header = () => {
@@ -21,29 +21,29 @@ const Header = () => {
     return (
         <div>
             <header>
-                <div class="navbar row spacer">
+                <div class="navbar row space-between">
                     <MenuIcon />
                     <img src={ImgLogo} class="sp-logo" onClick={() => dispatch(push('/'))} alt="" />
                     <Search />
                     <div class="logo">
-                        {/* <img src={ImgLogo} alt="" class="logoimg" onClick={() => dispatch(push('/'))} /> */}
+                        <img src={ImgLogo} alt="" class="logoimg" onClick={() => dispatch(push('/'))} />
                     </div>
-                    <div class="smenu row">
-                        <form onSubmit={submitAction} class="searcharea">
-                            <div class="searcharea mar15">
+                    <div class="menus row">
+                        <form onSubmit={submitAction} class="searchbox">
+                            <div class="searchbox m-15">
                                 <input type="text" onChange={inputSearch} name="search" />
                                 <img src={ImgSearch} alt="" />
                             </div>
                         </form>
-                        <div class="category mar15 row" onClick={() => dispatch(push('/category'))}>
-                            <div class="p10" onClick={() => dispatch(push('/category'))}>
+                        <div class="category m-15 row" onClick={() => dispatch(push('/category'))}>
+                            <div class="p-10" onClick={() => dispatch(push('/category'))}>
                                 Category
                             </div>
                             <img src={ImgArrowDown} alt="" />
                         </div>
-                        <div class="favs mar15 row" onClick={() => dispatch(push('/favourites'))}>
-                            <div class="p10">Favorites</div>
-                            <img src={ImgHeart} alt="" />
+                        <div class="favourites m-15 row" onClick={() => dispatch(push('/favourites'))}>
+                            <div class="p-10">Favourites</div>
+                            <img src={ImgHeart} class="p-10" alt="" />
                         </div>
                     </div>
                 </div>

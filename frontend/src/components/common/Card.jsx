@@ -4,8 +4,6 @@ import { addFavourite } from '../../reducks/favourites/operations';
 import { getFavourites } from '../../reducks/favourites/selectors';
 import Imgstar from '../../assets/img/star.png';
 import ImgHeart from '../../assets/img/red_heart.svg';
-import ImgArrow from '../../assets/img/arrow.png'
-
 const Card = ({ movie }) => {
     const dispatch = useDispatch();
     const clickFavourite = movie => {
@@ -21,28 +19,26 @@ const Card = ({ movie }) => {
         }
     }, [favourites]);
     return (
-        <div>
-            <div class="moviebox mar10">
-                <img class="movieposter" src={movie.image} alt="" />
-                <div class="moviedeets">
+        <div class="card">
+            <div class="cards m-10">
+                <img class="cardimage" src={movie.image} alt="" />
+                <div class="carddetails">
                     <p>{movie.name}</p>
-                    <div class="row spacer">
+                    <div class="row space-between">
                         <div>
                             <img src={Imgstar} alt="" />
                             <span>{movie.rating}</span>
-                            <span class="darken">/10</span>
+                            <span class="dark">/10</span>
                         </div>
-                        <a href={movie.trailer_link} target="_blank">
-                        <div class="trailersec row">
-                            <img src={ImgArrow} alt="" />
-                            <div class="btn-text">  Trailer</div>
+                        <div class="trailer row">
+                            <img src="images/arrow.svg" alt="" />
+                            <a class ="trailer-link" href={movie.trailer_link} target="_blank"><div class="btn-text">&#9655; Trailer</div></a>
                         </div>
-                        </a>
                     </div>
                 </div>
                 {showLikeButton && (
                     <div
-                        class="favit"
+                        class="like"
                         onClick={() => {
                             clickFavourite(movie);
                         }}

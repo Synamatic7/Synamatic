@@ -35,7 +35,7 @@ const Search = () => {
             <Header />
             <section class="content">
                 <div class="pt">
-                    <h1 class="section-heading m20 p10">Search</h1>
+                    <h1 class="section-heading m-20 p-10">Search</h1>
                 </div>
                 {console.log(movies)}
                 <div class="grid">

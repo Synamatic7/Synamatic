@@ -24,14 +24,14 @@ const Category = () => {
             .catch(error => {
                 alert('Failed to connect API: /movies/');
             });
-        api.getMovies({ category_id: '4' })
+        api.getMovies({ category_id: '3' })
             .then(movies => {
                 setCategoryDrama(movies);
             })
             .catch(error => {
                 alert('Failed to connect API: /movies/');
             });
-        api.getMovies({ category_id: '3' })
+        api.getMovies({ category_id: '4' })
             .then(movies => {
                 setCategoryHorror(movies);
             })
@@ -43,8 +43,8 @@ const Category = () => {
         <>
             <Header />
             <section class="content">
-                <div class="pt">
-                    <h1 id="actions" class="section-heading m20 p10">
+                <div class="pt" id="action">
+                    <h1 class="section-heading m-20">
                         Action
                     </h1>
                 </div>
@@ -56,11 +56,11 @@ const Category = () => {
                     </div>
                 ) : (
                     <div class="no-post">
-                        <p>No movies here yet...</p>
+                        <p>No movies available at this time.</p>
                     </div>
                 )}
-                <hr class="divider" />
-                <h1 id="comedy" class="section-heading m20">
+                <hr class="divider" id="comedy"/>
+                <h1 class="section-heading m-20">
                     Comedy
                 </h1>
                 {categoryComedy && categoryComedy.results.length > 0 ? (
@@ -71,11 +71,11 @@ const Category = () => {
                     </div>
                 ) : (
                     <div class="no-post">
-                        <p>No movies here yet...</p>
+                        <p>No movies available at this time.</p>
                     </div>
                 )}
-                <hr class="divider" />
-                <h1 id="drama" class="section-heading m20">
+                <hr class="divider" id="drama"/>
+                <h1 class="section-heading m-20">
                     Drama
                 </h1>
                 {categoryDrama && categoryDrama.results.length > 0 ? (
@@ -86,12 +86,12 @@ const Category = () => {
                     </div>
                 ) : (
                     <div class="no-post">
-                        <p>No movies here yet...</p>
+                        <p>No movies available at this time.</p>
                     </div>
                 )}
 
-                <hr class="divider" />
-                <h1 id="horror" class="section-heading m20">
+                <hr class="divider" id="horror"/>
+                <h1 class="section-heading m-20">
                     Horror
                 </h1>
 
@@ -103,7 +103,7 @@ const Category = () => {
                     </div>
                 ) : (
                     <div class="no-post">
-                        <p>No movies here yet...</p>
+                        <p>No movies available at this time.</p>
                     </div>
                 )}
             </section>

@@ -6,7 +6,7 @@ const Search = () => {
     const onClick = () => setShowResults(!showResults);
     return (
         <div>
-            <img src={ImgSearch} class="search2" alt="" onClick={onClick} />
+            <img src={ImgSearch} class="sp-search" alt="" onClick={onClick} />
             {showResults ? <Results /> : null}
         </div>
     );

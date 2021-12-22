@@ -14,8 +14,8 @@ const SearchBox = () => {
     };
     return (
         <>
-            <form onSubmit={submitAction} class="searcharea">
-                <div class="searcharea mar15 searchpop">
+            <form onSubmit={submitAction} class="searchbox">
+                <div class="searchbox m-15 searchpopup">
                     <input type="text" onChange={inputSearch} name="search" />
                     <img src={ImgSearch} alt="" />
                 </div>

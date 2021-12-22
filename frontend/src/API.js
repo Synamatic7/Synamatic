@@ -6,7 +6,7 @@ var baseURL;
 // } else {
 //     baseURL = 'http://127.0.0.1:8000';
 // }
-baseURL = 'https://sajid-symantic-backend.herokuapp.com/';
+baseURL = 'https://symantic-backend.herokuapp.com';
 
 const api = axios.create({
     baseURL: baseURL,
